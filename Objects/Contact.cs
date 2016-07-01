@@ -43,5 +43,13 @@ namespace ContactList.Objects
     {
       _address = newAddress;
     }
+    public static List<Contact> GetAll()
+    {
+      return _instances;
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }

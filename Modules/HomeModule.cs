@@ -14,9 +14,18 @@ namespace ContactList.Objects
       Get["/new"] = _ => {
         return View ["addnew.cshtml"];
       };
-      Post["/contact-list"] = _ => {
+      Get["/clear"] = _ => {
+        List<Contact> allContacts = Contact.GetAll();
+        Contact.ClearAll();
+        return View["clear.cshtml", allContacts];
+      };
+      Get["/contact_list"] = _ => {
+      	List<Contact> allContacts = Contact.GetAll();
+        return View ["list.cshtml", allContacts];
+      };
+      Post["/new_contact"] = _ => {
       	Contact newContact = new Contact(Request.Form["name"], Request.Form["phone"], Request.Form["address"]);
-        return View ["list.cshtml", newContact];
+        return View ["newcontact.cshtml", newContact];
       };
     }
   }
