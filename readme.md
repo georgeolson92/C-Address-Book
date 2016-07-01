@@ -16,7 +16,7 @@ _Create your own address book using this program!_
 ### Setup/Installation Requirements
 
 **Windows Users:**
-* Open PowerShell and ensure that C&#35; is installed (<a href="https://www.learnhowtoprogram.com/c/getting-started-with-c/installing-c">View link</a> for information on setting up Git in PowerShell)
+* Open PowerShell and ensure that C&#35; is installed (<a href="https://www.learnhowtoprogram.com/c/getting-started-with-c/installing-c">View link</a> for information on installing C&#35; in PowerShell)
 * Ensure that Git project management is functioning (<a href="https://www.learnhowtoprogram.com/c/getting-started-with-c/git-project-setup-for-windows">View link</a> for information on setting up Git in PowerShell)
 * Clone repository from github
 * Change directory to project folder
@@ -36,7 +36,7 @@ _Create your own address book using this program!_
 ### Known Bugs
 No known bugs in current version.
 
-### Support and contact details
+### Support and Contact Details
 You can reach me via email: **georgeolson92@gmail.com**
 
 ### Technologies Used

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css?family=Slabo+13px" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="../Content/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../Content/css/styles.css">
 		<title>Address Book</title>
 	</head>
 	<body>
@@ -10,8 +12,8 @@
 		<h1>You've added a new contact!</h1>
 
 		        <div class="contact">
+		        	<h3>@Model.GetName()</h3>
 					<ul>
-						<h3>@Model.GetName()</h3>
 						<li>@Model.GetPhone()</li>
 						<li>@Model.GetAddress()</li>
 					</ul>

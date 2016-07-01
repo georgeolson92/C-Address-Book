@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css?family=Slabo+13px" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="../Content/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../Content/css/styles.css">
 		<title>Address Book</title>
 	</head>
 	<body>
@@ -17,10 +19,10 @@
 			    @foreach (var contact in Model)
 			    {
 			        <div class="contact">
+			        	<h3>@contact.GetName()</h3>
 						<ul>
-							<h3>@contact.GetName()</h3>
-							<li>@contact.GetPhone()</li>
-							<li>@contact.GetAddress()</li>
+							<li><strong>Phone #: </strong>@contact.GetPhone()</li>
+							<li><strong>Address: </strong>@contact.GetAddress()</li>
 						</ul>
 				    </div>
 			    }
