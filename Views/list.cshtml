@@ -1,25 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../Content/css/bootstrap.min.css">
+		<title>Address Book</title>
+	</head>
+	<body>
+		<div class="container">
+		<h1>Contact List</h1>
+
+			@if (@Model.Count == 0)
+			    {
+			      <h3>No Contacts have been added yet!</h3>
+			    } else 
+			    {
+
+			    @foreach (var contact in Model)
+			    {
+			        <div class="contact">
+						<ul>
+							<h3>@contact.GetName()</h3>
+							<li>@contact.GetPhone()</li>
+							<li>@contact.GetAddress()</li>
+						</ul>
+				    </div>
+			    }
+			    }
 
 
-@if (@Model.Count == 0)
-    {
-      <h3>No Contacts have been added yet!</h3>
-    } else 
-    {
-
-    @foreach (var contact in Model)
-    {
-        <div class="contact">
-			<ul>
-				<h3>@contact.GetName()</h3>
-				<li>@contact.GetPhone()</li>
-				<li>@contact.GetAddress()</li>
-			</ul>
-	    </div>
-    }
-    }
 
 
-
-
-<a href="/new">Add a contact</a>
-<a href="/clear">Clear address book</a>
+			<a href="/new"><button class="btn btn-primary">Add a Contact</button></a>
+			<form action="/contacts_deleted" method="post">
+				<button type="submit" class="btn btn-primary">Clear List</button>
+			</form>
+		</div>
+	</body>
+</html>

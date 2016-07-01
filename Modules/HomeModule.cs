@@ -14,7 +14,7 @@ namespace ContactList.Objects
       Get["/new"] = _ => {
         return View ["addnew.cshtml"];
       };
-      Get["/clear"] = _ => {
+      Post["/contacts_deleted"] = _ => {
         List<Contact> allContacts = Contact.GetAll();
         Contact.ClearAll();
         return View["clear.cshtml", allContacts];

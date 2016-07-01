@@ -1,13 +1,26 @@
-You've added a new contact!
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../Content/css/bootstrap.min.css">
+		<title>Address Book</title>
+	</head>
+	<body>
+		<div class="container">
 
-        <div class="contact">
-			<ul>
-				<h3>@Model.GetName()</h3>
-				<li>@Model.GetPhone()</li>
-				<li>@Model.GetAddress()</li>
-			</ul>
-	    </div>
+		<h1>You've added a new contact!</h1>
+
+		        <div class="contact">
+					<ul>
+						<h3>@Model.GetName()</h3>
+						<li>@Model.GetPhone()</li>
+						<li>@Model.GetAddress()</li>
+					</ul>
+			    </div>
 
 
-<a href="/contact_list">View list</a>
-<a href="/new">Add another contact</a>
+		<a href="/contact_list"><button class="btn btn-primary">View List</button></a>
+		<a href="/new"><button class="btn btn-primary">Add Another Contact</button></a>
+
+		</div>
+	</body>
+</html>
