@@ -1,8 +1,8 @@
 using Nancy;
-using CdList.Objects;
+using ContactList.Objects;
 using System.Collections.Generic;
 
-namespace CdList.Objects
+namespace ContactList.Objects
 {
   public class HomeModule : NancyModule
   {
@@ -10,6 +10,13 @@ namespace CdList.Objects
     {
       Get["/"] = _ => {
         return View ["index.cshtml"];
+      };
+      Get["/new"] = _ => {
+        return View ["addnew.cshtml"];
+      };
+      Post["/contact-list"] = _ => {
+      	Contact newContact = new Contact(Request.Form["name"], Request.Form["phone"], Request.Form["address"]);
+        return View ["list.cshtml", newContact];
       };
     }
   }
