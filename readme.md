@@ -40,7 +40,7 @@ No known bugs in current version.
 You can reach me via email: **georgeolson92@gmail.com**
 
 ### Technologies Used
-C&#35;, Nancy, Razor, HTML, ASP.NET
+C&#35;, Nancy framework, HTML, Bootstrap framework, ASP.NET
 
 #### License
 MIT
