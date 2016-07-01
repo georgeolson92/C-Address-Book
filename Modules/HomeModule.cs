@@ -9,7 +9,8 @@ namespace ContactList.Objects
     public HomeModule()
     {
       Get["/"] = _ => {
-        return View ["index.cshtml"];
+        List<Contact> allContacts = Contact.GetAll();
+        return View ["index.cshtml", allContacts];
       };
       Get["/new"] = _ => {
         return View ["addnew.cshtml"];
@@ -18,10 +19,6 @@ namespace ContactList.Objects
         List<Contact> allContacts = Contact.GetAll();
         Contact.ClearAll();
         return View["clear.cshtml", allContacts];
-      };
-      Get["/contact_list"] = _ => {
-      	List<Contact> allContacts = Contact.GetAll();
-        return View ["list.cshtml", allContacts];
       };
       Post["/new_contact"] = _ => {
       	Contact newContact = new Contact(Request.Form["name"], Request.Form["phone"], Request.Form["address"]);
